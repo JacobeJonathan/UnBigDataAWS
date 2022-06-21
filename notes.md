@@ -128,7 +128,7 @@ Diseñanda para ser escalable:
   - Batch: En esta capa vamos a procesar toda la información almacenada con anterioridad, desde el día anterior hasta meses.
   - Serve: Dentro de esta capa es posible visualizar la data procesada de la capa batch.
   - Speed: Conforme llega la data se va a ir procesando.
- ![ComunLosCloudProviders](src/3.png)
+  - ![ComunLosCloudProviders](src/3.png)
 
  ## ArquitecturaKappa
  Fue presentada por Jay Krepsen en el 2014 como una evolución de la arquitectura lambda. Elimina la capa batch haciendo que todo se procese en tiempo real.
@@ -140,9 +140,9 @@ Diseñanda para ser escalable:
   - Solo un flujo de procesamiento.
   - Capaz de reprocesar.
   Ejemplo: ver en tiempo real cuantos usuarios estan en la aplicacion y tomar buenas decisiones mas rapida y el comportamiento que tienen los usuarios.
-   ![ComunLosCloudProviders](src/4.png)
+  - ![ComunLosCloudProviders](src/4.png)
 ## ArquitecturaBatch
 
 Es una parte especifica de la arquitectura lamba es importante ver ya que necesitamos saber como funiona en el batch:
-![ComunLosCloudProviders](src/5.png)
-https://www.paradigmadigital.com/techbiz/de-lambda-a-kappa-evolucion-de-las-arquitecturas-big-data/
+- ![ComunLosCloudProviders](src/5.png)
+- Link: https://www.paradigmadigital.com/techbiz/de-lambda-a-kappa-evolucion-de-las-arquitecturas-big-data/
