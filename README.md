@@ -9,7 +9,7 @@
 - [Arquitectura Kappa](#ArquitecturaKappa)
 - [Arquitectura Batch](#ArquitecturaBatch)
 - [Demo - Creando nuestro IDE en la nube con Python - Boto3](#IDENubePython)
-- [¿Cómo usar Boto3?](#¿CómousarBoto3?)
+- [¿Cómo usar Boto3?](#CómousarBoto3)
 - [](#)
 - [](#)
 - [](#)
@@ -172,7 +172,7 @@ Es una parte especifica de la arquitectura lamba es importante ver ya que necesi
 - Con run ejecutamos
 - Nos mostrara un consigo json = ojo: poner el pais
 - ![ComunLosCloudProviders](src/aws3.png)
-## ¿CómousarBoto3?
+## CómousarBoto3
 - https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html
 - https://docs.aws.amazon.com/es_es/cloud9/latest/user-guide/sample-python.html
 - https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html
