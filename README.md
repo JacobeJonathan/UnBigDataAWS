@@ -8,8 +8,8 @@
 - [Arquitecturas Lambda](#ArquitecturaLambda)
 - [Arquitectura Kappa](#ArquitecturaKappa)
 - [Arquitectura Batch](#ArquitecturaBatch)
-- [](#)
-- [](#)
+- [Demo - Creando nuestro IDE en la nube con Python - Boto3](#IDENubePython)
+- [¿Cómo usar Boto3?](#¿CómousarBoto3?)
 - [](#)
 - [](#)
 - [](#)
@@ -37,6 +37,8 @@
 
 ## IniciandoConBigData
 - Big Data es un campo orientado al análisis, procesamiento y almacenamiento de grandes cantidades de información que permite mejorar el valor de tu negocio. Utilizando la información mediante este esquema podemos detectar puntos de optimización en diferentes áreas.
+- alt + 91 y alt + 93 para crear corchetes
+
 - Los proveedores de servicios de nube son empresas que instalan nubes públicas, gestionan nubes privadas u ofrecen elementos de cloud computing (también llamados servicios de cloud computing) según se soliciten, lo cual incluye las Infraestructuras como servicio (IaaS), las Plataformas como servicio (PaaS)
 - Infraestructura como servicio (IaaS) se refiere a los servicios en línea que proporcionan un alto-nivel de APIs utilizadas para indireccionar detalles a bajo nivel de infraestructura como recursos de informática física, ubicación, dato partitioning, scaling, seguridad, copia de seguridad etc.
 
@@ -146,3 +148,31 @@ Diseñanda para ser escalable:
 Es una parte especifica de la arquitectura lamba es importante ver ya que necesitamos saber como funiona en el batch:
 - ![ComunLosCloudProviders](src/5.png)
 - Link: https://www.paradigmadigital.com/techbiz/de-lambda-a-kappa-evolucion-de-las-arquitecturas-big-data/
+
+## IDENubePython
+- Documentacion:https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
+- Repositorio en github del bot: https://github.com/boto/boto3
+
+- Como crear un ID:
+  - Buscamos el srevicio Cloud9
+  - Create enviroment
+  - creamos nombre
+  - Breve descripcion
+  - Create instance for enviroment
+  - t2.micro
+  - after 30 minutos(default)  se va a detener
+  - En la parte de networking
+  - Para nuestro caso lo dejamos
+  - next step
+  - Nos mostrar un resumen
+  - Create enviroment
+  saber como funiona en el batch:
+- ![ComunLosCloudProviders](src/aws.png)
+- ![ComunLosCloudProviders](src/aws2.png)
+- Con run ejecutamos
+- Nos mostrara un consigo json = ojo: poner el pais
+- ![ComunLosCloudProviders](src/aws3.png)
+## ¿CómousarBoto3?
+- https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html
+- https://docs.aws.amazon.com/es_es/cloud9/latest/user-guide/sample-python.html
+- https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html
