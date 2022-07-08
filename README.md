@@ -10,9 +10,9 @@
 - [Arquitectura Batch](#ArquitecturaBatch)
 - [Demo - Creando nuestro IDE en la nube con Python - Boto3](#IDENubePython)
 - [¿Cómo usar Boto3?](#CómousarBoto3)
-- [](#)
-- [](#)
-- [](#)
+- [API Gateway](#APIGateway)
+- [Storage Gateway](#StorageGateway)
+- [Kinesis Data Streams](#KinesisDataStreams)
 - [](#)
 - [](#)
 - [](#)
@@ -176,3 +176,48 @@ Es una parte especifica de la arquitectura lamba es importante ver ya que necesi
 - https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html
 - https://docs.aws.amazon.com/es_es/cloud9/latest/user-guide/sample-python.html
 - https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html
+## APIGateway
+- Este servicio nos va a servir como puerta de enlace entre la data que tenemos y la plataforma en la nube.
+
+- Soporta cientos de miles de llamadas concurrentes.
+Previene ataques DDOS.
+- Comparto repositorio en Git con stacks de clodformation para desplegar servicios API Gateway, Lambda Function y DynamoDB con infraestructura como código, que nos sirve para ingesta de información, procesamiento y almacenamiento.
+- https://github.com/JoseLuisSR/springboot-aws-serverless
+### Como funciona API Gateway? (un ejemplo)
+
+- Supongamos que tiene un sistema de gestion de tickets y quieres procesar todos esos casos para extraer conclusiones que te permitan brindar un mejor servicio
+- Puedes configurar para que todos esos ticket, a través de una operación PUT, se envien al API Gateway
+- El API Gateway va a ser capaz de tomarlo y enviarlos a una función Lambda
+- La función Lambda tiene la capacidad de interactuar, utilizando Python (o cualquier SDK), con cualquiera de los servicios de información que tenemos en adelante (en AWS)
+## StorageGateway
+- n-premises: En las instalaciones / en local. Se refiere a la utilización de servidores y entornos informáticos propios de la empresa.
+
+- VM: Virtual machine / Máquina virtual.
+
+- VMDK: Virtual machine disk.
+
+- NFS: Network File System. Es un protocolo de nivel de aplicación. Posibilita que distintos sistemas conectados a una misma red accedan a ficheros remotos como si se tratara de locales.
+
+- Tiene tres características importantes:
+
+- Nos permite enviar información desde nuestro datacenter on-premise a la nube.
+- Puedes enviar los logs de una aplicación on-premise para que sean procesados.
+- Funciona en una máquina virtual que instalamos en nuestro datacenter.
+- ![StorageGateway](src/6.png)
+## KinesisDataStreams
+Características de Kinesis Data Streams:
+
+Recopila y procesa grandes cantidades de stream de datos en tiempo real. Deben ser gigantescas cantidades de datos (TB, HB, con miles o millones de fuentes de información que alimentan el servicio).
+Casos de uso: Procesamiento de logs, social media, market data feeds y web clickstream.
+Kinesis Data Streams nos permite hacer agregaciones en el proceso de información; es decir, podemos juntar información, agruparla y hacer ciertas actividades con dicha información mientras es procesada.
+Así está compuesto Kinesis Data Streams:
+
+- Data Record: Es la unidad de dato almacenada en Kinesis Data Streams.
+Retention period: El tiempo en que la información se mantiene accesible después de ser agregada al stream. Es muy importante tener en cuenta que Kinesis Data Streams no es un servicio para almacenar información, pero podemos contar con un periodo de retención, que por defecto es de 24 horas.
+Producer: Es el encargado de poner el Data Record en Kinesis Data Streams.
+- Consumer: Toma los Data Records ya procesados de Kinesis Data Streams para alimentar otro sistema de información.
+- Shard: Es una secuencia de Data Records dentro de un stream. En la configuración de Kinesis, debemos especificar la cantidad de shards, y la cantidad de shard estará determinada principalmente por la cantidad del flujo de información que tengamos.
+Partition key: Se usa para agrupar la información por shard dentro de un stream.
+Es así que Kinesis Data Streams se convierte en una parte fundamental de arquitecturas en tiempo real, arquitecturas en las cuales la necesidad principal es procesar millones de datos; se puede crecer N cantidad de shards y procesar de acuerdo a lo que permitan los shards en tamaño.
+
+K- inesis Data Stream nos brinda alta disponibilidad, redundancia y un performance muy alto para manejar grandes cantidades de datos en tiempo real.
