@@ -13,8 +13,8 @@
 - [API Gateway](#APIGateway)
 - [Storage Gateway](#StorageGateway)
 - [Kinesis Data Streams](#KinesisDataStreams)
-- [](#)
-- [](#)
+- [Configuración de Kinesis Data Streams](#ConfiguracióndeKinesisDataStreams)
+- [DespegandoKinesisconCloudformation](#DespegandoKinesisconCloudformation)
 - [](#)
 - [](#)
 - [](#)
@@ -221,3 +221,21 @@ Partition key: Se usa para agrupar la información por shard dentro de un stream
 Es así que Kinesis Data Streams se convierte en una parte fundamental de arquitecturas en tiempo real, arquitecturas en las cuales la necesidad principal es procesar millones de datos; se puede crecer N cantidad de shards y procesar de acuerdo a lo que permitan los shards en tamaño.
 
 K- inesis Data Stream nos brinda alta disponibilidad, redundancia y un performance muy alto para manejar grandes cantidades de datos en tiempo real.
+## ConfiguracióndeKinesisDataStreams
+- Buscamos Kinesis
+- Sleccionamos kinesis data stream
+- ![datastream](src/7.png)
+- Creamos
+- Le asignamos la cantidad de shars es mu importante para el tiempo
+- ![datastream](src/8.png)
+- lE DAMOS EN EL BOTON Y SE CARGARA NUESTRO KINESIS
+- ![datastream](src/9.png)
+- Debemos activar el cifrado:
+- ![datastream](src/10.png)
+- Tener en cuenta:
+- Cantidad de shards ( particiones de memoeria)
+- Perido de retencion
+- Encrypcion
+- La parte de login que es la parte mas importante
+## DespegandoKinesisconCloudformation
+- entrar a la carpeta cfn-kinesis-master para ver el codigo a ejecutar en aws para kinesis
