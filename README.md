@@ -16,7 +16,7 @@
 - [Configuración de Kinesis Data Streams](#ConfiguracióndeKinesisDataStreams)
 - [DespegandoKinesisconCloudformation](#DespegandoKinesisconCloudformation)
 - [AWS - Glue](#AWSGlue)
-- [](#)
+- [Instalando Apache Zeppelin](#InstalandoApacheZeppelin)
 - [](#)
 - [](#)
 - [](#)
@@ -240,3 +240,24 @@ K- inesis Data Stream nos brinda alta disponibilidad, redundancia y un performan
 ## DespegandoKinesisconCloudformation
 - entrar a la carpeta cfn-kinesis-master para ver el codigo a ejecutar en aws para kinesis
 ## AWSGlue
+
+## InstalandoApacheZeppelin
+- Apache Zeppelin es un servicio que permite la ejecución de notebooks para análisis de datos utilizando SQL, Scala o Python. Tiene integración con los servicios de AWS.
+- Instalar:
+  - Buscar en google apache zeppelin
+  - https://www.apache.org/dyn/closer.cgi/zeppelin/zeppelin-0.8.2/zeppelin-0.8.2-bin-all.tgz
+  - damos clien en We suggest the following site for your download: y se descargarar
+  - Luego l descomprimimos
+  - Entramos al cmd y nos ubicamos donde se encuentra la carpeta de zeppelin descomprimida
+  - ![datastream](src/11.png)
+  - otra forma de installar es = winget install zeppelin
+  - Luego debemos tener java instalado sino no va funcionar
+  - Para windows se inia zeppelin con " zeppelin.cmd" link de como installar aqui https://zeppelin.apache.org/docs/0.8.1/quickstart/install.html#starting-apache-zeppelin
+  - y le damos entrer porque se va parar el cmd
+    - ![datastream](src/12.png)
+    - Finalmente nos saldra la pantalla del localhost:8080
+    - ![datastream](src/13.png)
+  - Creamos un notebook
+  - ![datastream](src/14.png)
+  - ![datastream](src/15.png)
+  - ![datastream](src/16.png)
