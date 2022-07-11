@@ -17,7 +17,7 @@
 - [DespegandoKinesisconCloudformation](#DespegandoKinesisconCloudformation)
 - [AWS - Glue](#AWSGlue)
 - [Instalando Apache Zeppelin](#InstalandoApacheZeppelin)
-- [](#)
+- [Creación del Developer Endpoint](#CreacióndelDeveloperEndpoint)
 - [](#)
 - [](#)
 - [](#)
@@ -261,3 +261,37 @@ K- inesis Data Stream nos brinda alta disponibilidad, redundancia y un performan
   - ![datastream](src/14.png)
   - ![datastream](src/15.png)
   - ![datastream](src/16.png)
+## CreacióndelDeveloperEndpoint
+- Buscamos en AWS glue
+- ![datastream](src/17.png)
+- Vamos a la parte izquierda y damon lic en "endpoints"
+- y rellenams los casilleros si pide rol en la parte de la descripcion podremos crearlo
+- ![datastream](src/18.png)
+- ![datastream](src/19.png)
+- ahora nos pedira la clave ssh
+- nos camos a crearla "ssh-keygen"
+- ![datastream](src/20.png)
+- ahora aremos la conexion con un .vim
+- ojo: primero installamos el puttygen en windows con codigo aun no podemos generarlo en formato vim .pub
+- ![datastream](src/21.png) 
+- tutorial de como crear: https://www.youtube.com/watch?v=VppLs_qca5o
+- buscamos la carpeta que dicen cuando se crea el ssh y buscamos el .pub
+- ![datastream](src/22.png) 
+- nos va salir error porque no emos puesto nuestro correo ni contraseña o tipo
+- ![datastream](src/23.png) 
+- nos vamos a crear lo que nos falta
+- asi se crea correctamente la llave
+- ![datastream](src/25.png) 
+- paara que la llave nos acepte mejor darle en el boton de de agegar una nuev allave generada y finish
+- ![datastream](src/26.png) 
+- damos clic en nuestro developer ented y veremos toda la informacion y de como conectarnos
+- ![datastream](src/27.png) 
+- link del documento de como enlazarse: https://docs.aws.amazon.com/glue/latest/dg/dev-endpoint-tutorial-local-notebook.html
+- nos vamos a animimous > interpreter > buscamos "spark"
+- ![datastream](src/28.png) 
+- configuramos
+- ![datastream](src/29.png) 
+- guardamos
+- y solo pegas en un block d enotas y se ejecutaras
+
+
