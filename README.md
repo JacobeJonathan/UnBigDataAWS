@@ -18,22 +18,8 @@
 - [AWS - Glue](#AWSGlue)
 - [Instalando Apache Zeppelin](#InstalandoApacheZeppelin)
 - [Creación del Developer Endpoint](#CreacióndelDeveloperEndpoint)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+- [Creando nuestro primer ETL - Crawling](#CreandonuestroprimerETL-Crawling)
+
 
 ## IniciandoConBigData
 - Big Data es un campo orientado al análisis, procesamiento y almacenamiento de grandes cantidades de información que permite mejorar el valor de tu negocio. Utilizando la información mediante este esquema podemos detectar puntos de optimización en diferentes áreas.
@@ -294,4 +280,22 @@ K- inesis Data Stream nos brinda alta disponibilidad, redundancia y un performan
 - guardamos
 - y solo pegas en un block d enotas y se ejecutaras
 
-
+## CreandonuestroprimerETL-Crawling
+- repositoria github par autilizar como ejemplo: https://github.com/czam01/glue-examples
+- Primero buscamos S3 en la consola de aws 
+- creamos nuestro bucket
+- ![datastream](src/30.png) 
+- ![datastream](src/31.png) 
+- Creamos nuestro bucket de destino
+- En el bucket jacob tendremos el bucket de origen
+- en el bucket target-jacob lo tendremosya tranasformada
+- cargamos todos los archivos que estan en el repositorio d egithub
+- ![datastream](src/32.png) 
+- le damos en upload para que cargue todos los archivos
+- ![datastream](src/33.png) 
+- ya se instalo todo correctamente
+- ![datastream](src/34.png) 
+- Nos vamos al Glue console
+- Entramos a Crawlers
+- Agregamos un nuevo crawler
+- ![datastream](src/35.png) 
